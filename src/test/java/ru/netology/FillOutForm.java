@@ -28,8 +28,6 @@ public class FillOutForm {
         $("[data-test-id = phone] input").setValue("+71112223344");
         $("[data-test-id = agreement").click();
         $$("button").find(exactText("Забронировать")).click();
-        $(withText("Успешно!")).shouldBe(Condition.visible, Duration.ofSeconds(15000));
-
-
+        $(withText("Успешно!")).shouldBe(Condition.visible);
     }
 }
