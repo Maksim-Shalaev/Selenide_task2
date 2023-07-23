@@ -32,7 +32,7 @@ public class FillOutForm {
         $("[data-test-id = agreement").click();
         $$("button").find(exactText("Забронировать")).click();
         $(".notification__content")
-                .shouldHave(Condition.text("Встреча успешно забронирована на " + generateDate(110, "dd.MM.yyyy")), Duration.ofSeconds(15))
+                .shouldHave(Condition.text("Встреча успешно забронирована на " + generateDate(110, "dd.MM.yyyy")), Duration.ofSeconds(5))
                 .shouldBe(Condition.visible);
     }
 }
